@@ -1,0 +1,37 @@
+body {
+  background-image: url('smiski.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+    width:10%;
+    background-color: rgb(148, 201, 155);
+    padding: 20px;  
+    margin: 0px auto;
+    text-align:center;
+    border: 5px solid #378534;
+    border-radius: 10px;
+}
+
+h1{
+    color:rgb(83, 95, 184);
+}
+img {
+  width: 50%;
+  border-radius: 10%;
+}
+li{
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
