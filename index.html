@@ -1,59 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q3 Seatwork 2: Discount Portal</title>
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
-     <!-- Bootstrap -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-      <script src=main.js></script>
-</head>
-<body>
-    <header class="navbar navbar-expand-sm bg-success fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" >Comp Hub</a>
-            <form class="d-flex">
-                <button class="btn btn-warning" type="button">Active Promo</button>
-            </form>
-        </div>
-    </header>
-    <!-- End of Header -->
-<br>
-<br>
-<br>
-    <main class="container-fluid">
-        <div class="container">
-            <h2>Want a gaming laptop? 🎮</h2>
-            <p>Enter your budget to find the right one!</p>
-            <form>
-                <label for="base"></label>
+// fuction for Discount Button
+    function getDiscount(){
+        // Declare variables
+            let price = document.getElementById("budget").value;
+            let discount = Number(price * 0.2).toFixed(2); // Compute for the 20% off discount
+        // Display output using JS method
+            document.getElementById("brands").innerHTML =`
+            <div class="container" style="width: 30%;">
+                <h3>Recommended Brands</h3>
+                <button type="button" class="btn btn-warning mt-3">Acer</button>
+                <button type="button" class="btn btn-warning mt-3">Apple</button>
+                <button type="button" class="btn btn-warning mt-3">Lenovo</button>
                 <br>
-                <input type="number" id="budget" class="form-control" placeholder="Enter budget (Ex: 5000)">
                 <br>
-                    <button type="button" class="btn btn-warning mt-3" onclick="getDiscount()">Brands & Discounts</button>
-                    <br>
-                    <br>
-                    <div id="brands"></div>
+                <p>Eligible Discount:</P>
+                <h1><span class="badge bg-warning">${discount}</span></h1>
+            </div> `;
 
-                    <button type="button" class="btn btn-warning mt-3" onclick="getLocation()">Store Location</button>
-                    <br>
-                    <div id="location"></div>
+    }
 
-                    <button type="button" class="btn btn-warning mt-3" onclick="window.location.reload()">Refresh</button>
-            </form>
-        </div>
-        <br>
-        <br>
-    </main>
-    <br>
-    <br>
-
-    <footer class="fixed-bottom bg-success text-center">
-        <p>&copy; 2026 Comp Hub | All Rights Reserved</p>
-    </footer>
-<script src="main.js"></script>
-</body>
-</html>
+    function getLocation(){
+            document.getElementById("location").innerHTML =`
+            <div class="container" style="width: 30%;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiQOu117AkawylQF_POojkhD38UyC8cUcMtg&s">
+            <br>
+            <h3>Store Locations</h3>
+            <hr>
+            <li>
+                Greenhills: 3 Eisenhower St., Bgy. Greenhills, San Juan City, Metro Manila
+            </li>
+            <li> 
+               Sta. Ana: 2241 Pedro Gil St, Santa Ana, Manila, Metro Manila
+            </li>
+             <li> 
+               Angeles: MacArthur Hwy, Angeles, 2009 Pampanga
+            </li>
+            </div> `;
+            
+        }
